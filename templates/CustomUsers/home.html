@@ -1,0 +1,8 @@
+{% block content %}
+    {% if user.is_authenticated %}
+        <h2>Welcome, <small>{{ user.username }}</small>!</h2>
+        <h2>Hello {{ user.is_active }}</h2>
+    {% else %}
+        <h2>Logged out</h2>
+    {% endif %}
+{% endblock %}
